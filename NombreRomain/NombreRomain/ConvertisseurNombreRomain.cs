@@ -12,17 +12,31 @@ namespace NombreRomain
                 4 => "IV",
                 <= 8 => "V" + new string('I', nombre - 5),
                 9 => "IX",
-                <= 13 => "X" + new string('I', nombre - 10),
-                14 => "XIV",
-                <= 18 => "XV" + new string('I', nombre - 15),
-                19 => "XIX",
-                <= 23 => "XX" + new string('I', nombre - 20),
-                24 => "XXIV",
-                <= 28 => "XXV" + new string('I', nombre - 25),
-                29 => "XXIX",
-                <= 33 => "XXV" + new string('I', nombre - 25),
+                <= 13 => detecteDizaine(nombre) + new string('I', nombre - 10),
+                14 => detecteDizaine(nombre) + "IV",
+                <= 18 => detecteDizaine(nombre) + "V" + new string('I', nombre - 15),
+                19 => detecteDizaine(nombre) + "IX",
+                <= 23 => detecteDizaine(nombre) + new string('I', nombre - 20),
+                24 => detecteDizaine(nombre) + "IV",
+                <= 28 => detecteDizaine(nombre) + "V" + new string('I', nombre - 25),
+                29 => detecteDizaine(nombre) + "IX",
+                <= 33 => detecteDizaine(nombre) + "V" + new string('I', nombre - 25),
                 _ => throw new NotImplementedException()
             };
+        }
+
+        private static string detecteDizaine(int nombre)
+        {
+            if (nombre.ToString().Length > 1 && nombre < 20)
+            {
+                string dizaine = "X";
+                return dizaine;
+            }
+            else
+            {
+                string dizaine = "XX";
+                return dizaine;
+            }
         }
     }
 }
