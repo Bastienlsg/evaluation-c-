@@ -148,7 +148,7 @@ namespace NombreRomain.Test
         [InlineData(26)]
         [InlineData(27)]
         [InlineData(28)]
-        public void TestUnité252627(int n)
+        public void TestUnité25262728(int n)
         {
             // ETANT DONNE un nombre compris entre 25 et 28
             // QUAND on le convertit en nombre romain
@@ -168,6 +168,22 @@ namespace NombreRomain.Test
 
             // ALORS on obtient "XXIX"
             var attendu = "XXIX";
+            Assert.Equal(attendu, resultat);
+        }
+
+        [Theory]
+        [InlineData(30)]
+        [InlineData(31)]
+        [InlineData(32)]
+        [InlineData(33)]
+        public void TestUnité30313233(int n)
+        {
+            // ETANT DONNE un nombre compris entre 30 et 33
+            // QUAND on le convertit en nombre romain
+            var resultat = ConvertisseurNombreRomain.Convertir(n);
+
+            // ALORS on obtient "XXV"
+            var attendu = "XXV" + new string('I', n - 25);
             Assert.Equal(attendu, resultat);
         }
     }
