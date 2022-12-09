@@ -114,5 +114,18 @@ namespace NombreRomain.Test
             var attendu = "XIX";
             Assert.Equal(attendu, resultat);
         }
+
+        [Theory]
+        [InlineData(20)]
+        public void TestUnité20(int n)
+        {
+            // ETANT DONNE un nombre 20
+            // QUAND on le convertit en nombre romain
+            var resultat = ConvertisseurNombreRomain.Convertir(n);
+
+            // ALORS on obtient "XX" suivi de <n> fois 'I'
+            var attendu = "XX" + new string('I', n - 20);
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
