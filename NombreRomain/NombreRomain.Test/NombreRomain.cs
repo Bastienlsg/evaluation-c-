@@ -102,5 +102,17 @@ namespace NombreRomain.Test
             var attendu = "XV" + new string('I', n - 15);
             Assert.Equal(attendu, resultat);
         }
+
+        [Fact]
+        public void TestUnité19()
+        {
+            // ETANT DONNE le nombre 19
+            // QUAND on le convertit en nombre romain
+            var resultat = ConvertisseurNombreRomain.Convertir(19);
+
+            // ALORS on obtient "XIX"
+            var attendu = "XIX";
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
