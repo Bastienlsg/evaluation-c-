@@ -46,5 +46,17 @@ namespace NombreRomain.Test
             var attendu = "V" + new string('I', n-5);
             Assert.Equal(attendu, resultat);
         }
+
+        [Fact]
+        public void TestUnité9()
+        {
+            // ETANT DONNE le nombre 9
+            // QUAND on le convertit en nombre romain
+            var resultat = ConvertisseurNombreRomain.Convertir(9);
+
+            // ALORS on obtient "IX"
+            var attendu = "IX";
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
