@@ -42,5 +42,17 @@ namespace NombreRomain.Test
             var attendu = "V";
             Assert.Equal(attendu, resultat);
         }
+
+        [Fact]
+        public void TestUnité6()
+        {
+            // ETANT DONNE le nombre 6
+            // QUAND on le convertit en nombre romain
+            var resultat = ConvertisseurNombreRomain.Convertir(6);
+
+            // ALORS on obtient "VI"
+            var attendu = "V" + new string('I', 1);
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
