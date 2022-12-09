@@ -122,7 +122,7 @@ namespace NombreRomain.Test
         [InlineData(23)]
         public void TestUnité20212223(int n)
         {
-            // ETANT DONNE un nombre compris entre 20 et 22
+            // ETANT DONNE un nombre compris entre 20 et 23
             // QUAND on le convertit en nombre romain
             var resultat = ConvertisseurNombreRomain.Convertir(n);
 
