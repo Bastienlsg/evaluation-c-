@@ -117,9 +117,10 @@ namespace NombreRomain.Test
 
         [Theory]
         [InlineData(20)]
-        public void TestUnité20(int n)
+        [InlineData(21)]
+        public void TestUnité2021(int n)
         {
-            // ETANT DONNE un nombre 20
+            // ETANT DONNE un nombre compris entre 20 et 21
             // QUAND on le convertit en nombre romain
             var resultat = ConvertisseurNombreRomain.Convertir(n);
 
