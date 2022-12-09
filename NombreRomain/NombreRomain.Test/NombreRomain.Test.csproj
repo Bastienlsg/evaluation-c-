@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NombreRomain\NombreRomain.csproj" />
+  </ItemGroup>
+
 </Project>
