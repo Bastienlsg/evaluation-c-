@@ -90,9 +90,10 @@ namespace NombreRomain.Test
         [Theory]
         [InlineData(15)]
         [InlineData(16)]
-        public void TestUnité1516(int n)
+        [InlineData(17)]
+        public void TestUnité151617(int n)
         {
-            // ETANT DONNE un nombre <n> compris entre 15 et 16
+            // ETANT DONNE un nombre <n> compris entre 15 et 17
             // QUAND on le convertit en nombre romain
             var resultat = ConvertisseurNombreRomain.Convertir(n);
 
