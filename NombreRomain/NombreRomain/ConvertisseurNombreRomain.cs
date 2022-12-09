@@ -10,7 +10,7 @@ namespace NombreRomain
             {
                 <= 3 => new string('I', nombre),
                 4 => "IV",
-                5 => "IV",
+                5 => "V",
                 _ => throw new NotImplementedException()
             };
         }

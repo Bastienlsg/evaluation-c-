@@ -1,3 +1,5 @@
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace NombreRomain.Test
 {
     public class NombreRomain
