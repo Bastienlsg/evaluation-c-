@@ -13,6 +13,7 @@ namespace NombreRomain
                 <= 8 => "V" + new string('I', nombre - 5),
                 9 => "IX",
                 <= 13 => "X" + new string('I', nombre - 10),
+                14 => "XIV",
                 _ => throw new NotImplementedException()
             };
         }

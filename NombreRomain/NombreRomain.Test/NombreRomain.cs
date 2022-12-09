@@ -74,5 +74,17 @@ namespace NombreRomain.Test
             var attendu = "X" + new string('I', n-10);
             Assert.Equal(attendu, resultat);
         }
+
+        [Fact]
+        public void TestUnité14()
+        {
+            // ETANT DONNE le nombre 14
+            // QUAND on le convertit en nombre romain
+            var resultat = ConvertisseurNombreRomain.Convertir(14);
+
+            // ALORS on obtient "XIV"
+            var attendu = "XIV";
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
