@@ -62,9 +62,10 @@ namespace NombreRomain.Test
         [Theory]
         [InlineData(10)]
         [InlineData(11)]
-        public void TestUnité1011(int n)
+        [InlineData(12)]
+        public void TestUnité101112(int n)
         {
-            // ETANT DONNE un nombre <n> compris entre 10 et 11
+            // ETANT DONNE un nombre <n> compris entre 10 et 12
             // QUAND on le convertit en nombre romain
             var resultat = ConvertisseurNombreRomain.Convertir(n);
 
