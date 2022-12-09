@@ -9,6 +9,8 @@ namespace NombreRomain
             switch(nombre) {
                 case 1:
                     return "I";
+                case 2:
+                    return "II";
                 default:
                     throw new NotImplementedException();
             }

@@ -2,15 +2,17 @@ namespace NombreRomain.Test
 {
     public class NombreRomain
     {
-        [Fact]
-        public void TestUnités()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        public void TestUnités(int n)
         {
-            // ETANT DONNE le nombre 1
-            // QUAND on le convertit en nombre romain
-            var resultat = ConvertisseurNombreRomain.Convertir(1);
+            // ETANT DONNE un nombre <n> compris entre 1 et 2
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomain.Convertir(n);
 
-            // ALORS on obtient une fois 'I'
-            var attendu = new string('I', 1);
+            // ALORS on obtient <n> fois 'II'
+            var attendu = new string('I', n);
             Assert.Equal(attendu, resultat);
         }
     }
