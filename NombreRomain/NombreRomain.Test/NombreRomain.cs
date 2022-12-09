@@ -31,25 +31,14 @@ namespace NombreRomain.Test
             Assert.Equal(attendu, resultat);
         }
 
-        [Fact]
-        public void TestUnité5()
-        {
-            // ETANT DONNE le nombre 5
-            // QUAND on le convertit en nombre romain
-            var resultat = ConvertisseurNombreRomain.Convertir(5);
-
-            // ALORS on obtient "V"
-            var attendu = "V";
-            Assert.Equal(attendu, resultat);
-        }
-
         [Theory]
+        [InlineData(5)]
         [InlineData(6)]
         [InlineData(7)]
         [InlineData(8)]
-        public void TestUnité678(int n)
+        public void TestUnité5678(int n)
         {
-            // ETANT DONNE un nombre <n> compris entre 6 et 8
+            // ETANT DONNE un nombre <n> compris entre 5 et 8
             // QUAND on le convertit en nombre romain
             var resultat = ConvertisseurNombreRomain.Convertir(n);
 
