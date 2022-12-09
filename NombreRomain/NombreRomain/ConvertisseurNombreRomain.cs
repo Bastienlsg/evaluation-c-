@@ -6,14 +6,13 @@ namespace NombreRomain
     {
         public static string Convertir(int nombre)
         {
-            switch(nombre) {
-                case <=3:
-                    return new string('I', nombre);
-                case 4:
-                    return "IV";
-                default:
-                    throw new NotImplementedException();
-            }
+            return nombre switch
+            {
+                <= 3 => new string('I', nombre),
+                4 => "IV",
+                5 => "IV",
+                _ => throw new NotImplementedException()
+            };
         }
     }
 }

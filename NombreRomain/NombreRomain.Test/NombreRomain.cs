@@ -28,5 +28,17 @@ namespace NombreRomain.Test
             var attendu = "IV";
             Assert.Equal(attendu, resultat);
         }
+
+        [Fact]
+        public void TestUnité5()
+        {
+            // ETANT DONNE le nombre 5
+            // QUAND on le convertit en nombre romain
+            var resultat = ConvertisseurNombreRomain.Convertir(5);
+
+            // ALORS on obtient "V"
+            var attendu = "V";
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
