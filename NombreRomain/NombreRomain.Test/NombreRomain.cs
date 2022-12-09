@@ -6,7 +6,6 @@ namespace NombreRomain.Test
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
-        [InlineData(4)]
         public void TestUnités(int n)
         {
             // ETANT DONNE un nombre <n> compris entre 1 et 3
