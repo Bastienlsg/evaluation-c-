@@ -119,7 +119,8 @@ namespace NombreRomain.Test
         [InlineData(20)]
         [InlineData(21)]
         [InlineData(22)]
-        public void TestUnité202122(int n)
+        [InlineData(23)]
+        public void TestUnité20212223(int n)
         {
             // ETANT DONNE un nombre compris entre 20 et 22
             // QUAND on le convertit en nombre romain
