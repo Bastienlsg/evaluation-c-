@@ -8,7 +8,7 @@ namespace NombreRomain.Test
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
-        public void TestUnités(int n)
+        public void TestUnités123(int n)
         {
             // ETANT DONNE un nombre <n> compris entre 1 et 3
             // QUAND on les convertit en nombres romains
@@ -43,15 +43,17 @@ namespace NombreRomain.Test
             Assert.Equal(attendu, resultat);
         }
 
-        [Fact]
-        public void TestUnité6()
+        [Theory]
+        [InlineData(6)]
+        [InlineData(7)]
+        public void TestUnité67(int n)
         {
-            // ETANT DONNE le nombre 6
+            // ETANT DONNE un nombre <n> compris entre 6 et 7
             // QUAND on le convertit en nombre romain
-            var resultat = ConvertisseurNombreRomain.Convertir(6);
+            var resultat = ConvertisseurNombreRomain.Convertir(n);
 
-            // ALORS on obtient "VI"
-            var attendu = "V" + new string('I', 1);
+            // ALORS on obtient "V" suivi de <n> fois 'I'
+            var attendu = "V" + new string('I', n-5);
             Assert.Equal(attendu, resultat);
         }
     }
