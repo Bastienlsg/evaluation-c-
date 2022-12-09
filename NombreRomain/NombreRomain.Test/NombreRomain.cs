@@ -46,9 +46,10 @@ namespace NombreRomain.Test
         [Theory]
         [InlineData(6)]
         [InlineData(7)]
-        public void TestUnité67(int n)
+        [InlineData(8)]
+        public void TestUnité678(int n)
         {
-            // ETANT DONNE un nombre <n> compris entre 6 et 7
+            // ETANT DONNE un nombre <n> compris entre 6 et 8
             // QUAND on le convertit en nombre romain
             var resultat = ConvertisseurNombreRomain.Convertir(n);
 
