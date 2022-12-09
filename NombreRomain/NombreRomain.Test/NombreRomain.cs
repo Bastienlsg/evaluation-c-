@@ -61,13 +61,14 @@ namespace NombreRomain.Test
 
         [Theory]
         [InlineData(10)]
-        public void TestUnité10(int n)
+        [InlineData(11)]
+        public void TestUnité1011(int n)
         {
-            // ETANT DONNE un nombre 10
+            // ETANT DONNE un nombre <n> compris entre 10 et 11
             // QUAND on le convertit en nombre romain
             var resultat = ConvertisseurNombreRomain.Convertir(n);
 
-            // ALORS on obtient "V" suivi de <n> fois 'I'
+            // ALORS on obtient "X" suivi de <n> fois 'I'
             var attendu = "X" + new string('I', n-10);
             Assert.Equal(attendu, resultat);
         }
